@@ -18,19 +18,41 @@ Besides, life is an experience, cherish yourself and take control of the present
 
 ---
 
-## How It Works
+## Trigger
 
-Just say **"小罗同学"** (or `$xiao-luo-student`) in any conversation with your AI assistant, and it will check the current time and reply with the right reminder:
+**Explicit invocation only.** Say any of the following in your AI conversation:
 
-| Time | Message |
-|------|---------|
-| 23:00 – 01:00 | 小罗同学提醒您，夜深了，早点休息吧。 |
-| 07:00 – 09:00 | 小罗同学提醒您，早上别忘记吃早餐哟。 |
-| 11:00 – 13:00 | 小罗同学提醒您，午休时间到，要记得多喝水呀。 |
-| 18:00 – 20:00 | 小罗同学提醒您，现在是下班时间，晚饭吃什么呢。 |
-| Other times | 亚辉同学提醒您，工作辛苦了，需要休息一下啦。 |
+- `小罗同学`
+- `Xiao Luo`
+- `$xiao-luo-student`
 
-No scripts, no configuration, no dependencies. Just say the name.
+The AI will check the local time and reply with the matching message.
+
+## Trigger Conditions
+
+| Local Time | Message | By |
+|------------|---------|-----|
+| **23:00 – 00:59** | 小罗同学提醒您，夜深了，早点休息吧。 | 小罗 |
+| **07:00 – 08:59** | 小罗同学提醒您，早上别忘记吃早餐哟。 | 小罗 |
+| **11:00 – 12:59** | 亚辉同学提醒您，午休时间到，要记得多喝水呀。 | 亚辉 |
+| **18:00 – 19:59** | 亚辉同学提醒您，现在是下班时间，晚饭吃什么呢。 | 亚辉 |
+| **Other times** | 你好呀，小罗同学一直都在，要天天开心。 | 小罗 |
+
+### Time Chart
+
+```
+00  01  02  03  04  05  06  07  08  09  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24
+|── Night ──|              |Breakfast|  |─ Lunch ─|        |─ Dinner ─|        |── Night ──|
+  (小罗)                     (小罗)       (亚辉)              (亚辉)              (小罗)
+```
+
+### Cooldown
+
+None. Every invocation receives a response.
+
+### Language
+
+Chinese by default. Automatically translates for non-Chinese users.
 
 ## Install
 
@@ -58,8 +80,8 @@ xiao-luo-student/
 ├── README.md                  # This file
 ├── SKILL.md                   # Skill definition
 ├── agents/openai.yaml         # UI metadata
-├── scripts/                   # Legacy Python engine (optional)
-└── platforms/                 # Wrappers for other AI assistants
+├── platforms/                 # Wrappers for other AI assistants
+└── scripts/                   # Legacy Python engine (optional)
 ```
 
 ## License
