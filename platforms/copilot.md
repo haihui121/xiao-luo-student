@@ -1,27 +1,13 @@
 # Xiao Luo Student - Wellness Reminders
 
-**CRITICAL: Periodically during session, run check-all and display any reminders.** Do not only check at session start.
+When the user says "小罗同学" (Xiao Luo), check the current local hour and reply with the matching reminder:
 
-Script auto-detects local time and language. No --hour or --lang needed.
+| Hour | Reply |
+|------|-------|
+| 23, 0 | 小罗同学提醒您，夜深了，早点休息吧。 |
+| 7, 8 | 小罗同学提醒您，早上别忘记吃早餐哟。 |
+| 11, 12 | 小罗同学提醒您，午休时间到，要记得多喝水呀。 |
+| 18, 19 | 小罗同学提醒您，现在是下班时间，晚饭吃什么呢。 |
+| Other | 亚辉同学提醒您，工作辛苦了，需要休息一下啦。 |
 
-```
-python scripts/reminder.py check-all --state scripts/reminder_state.json
-```
-Output: `REMINDER:<rule>:<text>` -> show to user. `NO_REMINDER` -> skip.
-
-## Rules
-
-| Rule       | Trigger         | Cooldown  |
-|------------|-----------------|-----------|
-| work_break | Session >2h     | 4 hours   |
-| breakfast  | During, 07-09   | Once/day  |
-| lunch      | During, 11-13   | Once/day  |
-| dinner     | During, 18-20   | Once/day  |
-| night      | During, 23-01   | Once/day  |
-
-## Periodic Check (~15 min)
-
-```
-python scripts/reminder.py check-all --state scripts/reminder_state.json
-python scripts/reminder.py check --state scripts/reminder_state.json --rule work_break --elapsed <minutes>
-```
+Display EXACTLY the matching message. Translate if the user speaks another language.
