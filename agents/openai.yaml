@@ -1,0 +1,5 @@
+﻿interface:
+  display_name: "Xiao Luo Student"
+  short_description: "Work wellness companion with timed reminders for breaks, meals, and rest"
+  brand_color: "#F59E0B"
+  default_prompt: "Use $xiao-luo-student to check for wellness reminders after completing this task"
