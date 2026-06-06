@@ -1,8 +1,22 @@
 # Xiao Luo Student (小罗同学)
 
+> **Usage:** Just type `小罗同学` in your AI chat — that is the only trigger.
+
 > *"Life is an experience, cherish yourself and take control of the present."*
 
-Just say **"小罗同学"** and your AI assistant will reply with a time-appropriate wellness reminder.
+A wellness companion skill. Say the name, get a time-appropriate reminder.
+
+---
+
+## How to Use
+
+In any AI assistant that has this skill installed, simply type:
+
+```
+小罗同学
+```
+
+That is the **only** trigger. No other action needed. The AI will check the current local time and reply with the matching reminder below.
 
 ---
 
@@ -20,13 +34,13 @@ Besides, life is an experience, cherish yourself and take control of the present
 
 ## Trigger
 
-**Explicit invocation only.** Say any of the following in your AI conversation:
+| Method | Example |
+|--------|---------|
+| Chinese | `小罗同学` |
+| English | `Xiao Luo` |
+| Skill ID | `$xiao-luo-student` |
 
-- `小罗同学`
-- `Xiao Luo`
-- `$xiao-luo-student`
-
-The AI will check the local time and reply with the matching message.
+**Trigger type:** Explicit invocation — the user must type the trigger word. No automatic pop-ups.
 
 ## Trigger Conditions
 
@@ -70,8 +84,6 @@ Copy this entire folder to:
 | Cursor | `.cursorrules` |
 | GitHub Copilot | `.github/copilot-instructions.md` |
 | Windsurf | `.windsurfrules` |
-
-Platform instruction wrappers are in the `platforms/` directory.
 
 ## File Structure
 
