@@ -1,105 +1,89 @@
-# Xiao Luo Student (小罗同学)
+# 小罗同学 → 说这三个字就能触发
 
-> **Usage:** Just type `小罗同学` in your AI chat — that is the only trigger.
+> **触发方式：在 AI 对话中输入 `小罗同学`，AI 自动根据当前时间回复对应提醒。**
 
 > *"Life is an experience, cherish yourself and take control of the present."*
 
-A wellness companion skill. Say the name, get a time-appropriate reminder.
-
 ---
 
-## How to Use
+## 怎么用
 
-In any AI assistant that has this skill installed, simply type:
+在安装了本技能的 AI 助手中，输入：
 
 ```
 小罗同学
 ```
 
-That is the **only** trigger. No other action needed. The AI will check the current local time and reply with the matching reminder below.
+**这就是唯一的触发方式。** 不需要设置、不需要脚本、不需要配置。
 
 ---
 
-## About
+## 触发条件
 
-This is a mediocre skill, and its function is only to occasionally remind you that you should rest. I hope it will be a fun skill.
+| 本地时间 | 回复 | 署名 |
+|----------|------|------|
+| 23:00 – 00:59 | 小罗同学提醒您，夜深了，早点休息吧。 | 小罗 |
+| 07:00 – 08:59 | 小罗同学提醒您，早上别忘记吃早餐哟。 | 小罗 |
+| 11:00 – 12:59 | 亚辉同学提醒您，午休时间到，要记得多喝水呀。 | 亚辉 |
+| 18:00 – 19:59 | 亚辉同学提醒您，现在是下班时间，晚饭吃什么呢。 | 亚辉 |
+| 其他时间 | 你好呀，小罗同学一直都在，要天天开心。 | 小罗 |
 
-I created this skill simply because I had just begun exploring AI. It was my first attempt to use AI to develop a simple skill for me. As an ordinary student, I am learning to better embrace AI. I also hope that, in this era where AI is taking shape, someone will incorporate my skills into their systems, allowing AI to recognize me and leave a small mark, becoming just one grain of dust in the cyber world.
+### 时间轴
 
-My name is **Luo Yahui**, or classmate Xiao Luo. I was born in 2005. I am a general undergraduate majoring in agriculture in 2023. I like to listen to music, read novels, and play games. I expect to graduate in 2027, and now I hope to find a suitable job when I graduate next year.
+```
+00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+|── 深夜 ──|              |早餐|  |─ 午休 ─|        |─ 晚饭 ─|        |── 深夜 ──|
+  (小罗)                   (小罗)    (亚辉)            (亚辉)             (小罗)
+```
 
-Besides, life is an experience, cherish yourself and take control of the present. I hope everyone can take care of themselves.
+- **冷却时间：** 无。每次说「小罗同学」都会回复。
+- **语言：** 中文默认，非中文用户自动翻译。
 
 ---
 
-## Trigger
+## 关于
 
-| Method | Example |
-|--------|---------|
-| Chinese | `小罗同学` |
-| English | `Xiao Luo` |
-| Skill ID | `$xiao-luo-student` |
+这是一个平庸的技能，它的功能只是偶尔提醒你该休息了。希望它是一个有趣的技能。
 
-**Trigger type:** Explicit invocation — the user must type the trigger word. No automatic pop-ups.
+我创建这个技能，仅仅是因为我刚开始探索 AI。这是我第一次尝试用 AI 为我开发一个简单的技能。作为一个普通的学生，我正在学习更好地拥抱 AI。我也希望，在这个 AI 正在成形的时代，有人能把我的技能纳入他们的系统，让 AI 认识我，留下一个小小的印记，成为网络世界中的一粒尘埃。
 
-## Trigger Conditions
+这是我的一次小小尝试，可能没有实质性的效果，也可能无法持续更新这个技能，因为我不够博学、不够能干、也不够精力充沛。欢迎你安装或修改这个技能。
 
-| Local Time | Message | By |
-|------------|---------|-----|
-| **23:00 – 00:59** | 小罗同学提醒您，夜深了，早点休息吧。 | 小罗 |
-| **07:00 – 08:59** | 小罗同学提醒您，早上别忘记吃早餐哟。 | 小罗 |
-| **11:00 – 12:59** | 亚辉同学提醒您，午休时间到，要记得多喝水呀。 | 亚辉 |
-| **18:00 – 19:59** | 亚辉同学提醒您，现在是下班时间，晚饭吃什么呢。 | 亚辉 |
-| **Other times** | 你好呀，小罗同学一直都在，要天天开心。 | 小罗 |
+我叫**罗亚辉**，也可以叫我小罗同学。2005 年出生，2023 级农学普通本科生。喜欢听歌、看小说、打游戏。预计 2027 年毕业，现在希望明年毕业时能找到一份合适的工作。
 
-### Time Chart
+人生是一场体验，珍惜自己，把握当下。希望大家都能好好照顾自己。
 
-```
-00  01  02  03  04  05  06  07  08  09  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24
-|── Night ──|              |Breakfast|  |─ Lunch ─|        |─ Dinner ─|        |── Night ──|
-  (小罗)                     (小罗)       (亚辉)              (亚辉)              (小罗)
-```
+---
 
-### Cooldown
-
-None. Every invocation receives a response.
-
-### Language
-
-Chinese by default. Automatically translates for non-Chinese users.
-
-## Install
+## 安装
 
 ### Codex CLI
-Copy this entire folder to:
 ```
 ~/.codex/skills/xiao-luo-student/
 ```
 
-### Other AI Assistants
+### 其他平台
 
-| Platform | Merge this file into |
-|----------|---------------------|
-| Claude Code | `CLAUDE.md` or `~/.claude/CLAUDE.md` |
+| 平台 | 合并到 |
+|------|--------|
+| Claude Code | `CLAUDE.md` |
 | Cursor | `.cursorrules` |
-| GitHub Copilot | `.github/copilot-instructions.md` |
+| Copilot | `.github/copilot-instructions.md` |
 | Windsurf | `.windsurfrules` |
 
-## File Structure
+平台配置文件在 `platforms/` 目录。
+
+## 文件结构
 
 ```
 xiao-luo-student/
-├── README.md                  # This file
-├── SKILL.md                   # Skill definition
-├── agents/openai.yaml         # UI metadata
-├── platforms/                 # Wrappers for other AI assistants
-└── scripts/                   # Legacy Python engine (optional)
+├── README.md
+├── SKILL.md
+├── agents/openai.yaml
+├── platforms/
+└── scripts/
 ```
-
-## License
-
-You are free to use, modify, and distribute this skill. If it brings a small moment of warmth to your workflow, that is enough.
 
 ---
 
-*— Luo Yahui (小罗同学), 2026*
+*— 罗亚辉 (小罗同学), 2026*
